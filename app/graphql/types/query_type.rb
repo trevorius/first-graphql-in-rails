@@ -18,6 +18,21 @@ module Types
       Elevator.find(id)
      
     end
+    field :query2, Query2Type, null: false do
+      description "get a list of elevators"
+      argument :id, ID, required: true
+    end
+    def query2 (id:)
+      elevator = Elevator.find(id)
+      iD = id.to_i
+      nextelevator = Elevator.find(iD+1)
+      elevatorHash = elevator.attributes
+      elevatorHash["test"] = nextelevator
+      result = {
+        lift: elevatorHash
+      }
+     
+    end
 
 
   end

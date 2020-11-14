@@ -12,7 +12,7 @@ module Types
         field :notes, String, null: true 
         field :created_at, String, null: true 
         field :updated_at, String, null: true 
-        field :column_id, BuildingDetailType, null: true 
+        # field :column_id, BuildingDetailType, null: true 
         field :customer_id, String, null: true
     end
 end

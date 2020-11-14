@@ -9,5 +9,16 @@ module Types
     def test_field
       "Hello World!"
     end
+
+    field :query1, ElevatorType, null: false do
+      description "get a list of elevators"
+      argument :id, ID, required: true
+    end
+    def query1 (id:)
+      Elevator.find(id)
+     
+    end
+
+
   end
 end

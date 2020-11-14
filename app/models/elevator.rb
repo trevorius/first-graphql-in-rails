@@ -1,3 +1,3 @@
-class Elevator < ActiveRecord::Base
+class Elevator < ActiveRecord::Base
 
 end

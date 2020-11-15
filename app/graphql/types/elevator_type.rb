@@ -14,6 +14,6 @@ module Types
         field :updated_at, String, null: true 
         # field :column_id, BuildingDetailType, null: true 
         field :customer_id, String, null: true
-        field :test, ElevatorType, null: true
+        field :next_elevator, ElevatorType, null: true
     end
 end

@@ -27,7 +27,7 @@ module Types
       iD = id.to_i
       nextelevator = Elevator.find(iD+1)
       elevatorHash = elevator.attributes
-      elevatorHash["test"] = nextelevator
+      elevatorHash["next_elevator"] = nextelevator
       result = {
         lift: elevatorHash
       }

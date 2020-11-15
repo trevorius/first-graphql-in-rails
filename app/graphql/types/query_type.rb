@@ -34,6 +34,22 @@ module Types
      
     end
 
+    field :query3, Query3Type, null: false do
+      description "get a list of interventions"
+      argument :id, ID, required: true
+    end
+    def query3 (id:)
+      intervention = Factintervention.find(id)
+      interventionHash = intervention.attributes
+      # iD = id.to_i
+      # nextelevator = Elevator.find(iD+1)
+      # elevatorHash = elevator.attributes
+      # elevatorHash["next_elevator"] = nextelevator
+      result = {
+        intervention: interventionHash
+      }     
+    end
+
 
   end
 end
